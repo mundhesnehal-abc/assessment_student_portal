@@ -1,0 +1,344 @@
+/* CloudExam - University Examination Portal */
+
+:root {
+  --cloudexam-primary: #17365d;
+  --cloudexam-primary-hover: #102947;
+  --cloudexam-accent: #2563eb;
+  --cloudexam-background: #f1f5f9;
+  --cloudexam-border: #dce2ea;
+  --cloudexam-card-bg: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--cloudexam-background);
+  color: #1e293b;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--cloudexam-primary);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Primary Buttons */
+.btn-primary {
+  background-color: var(--cloudexam-primary) !important;
+  border-color: var(--cloudexam-primary) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(23, 54, 93, 0.15);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--cloudexam-primary-hover) !important;
+  border-color: var(--cloudexam-primary-hover) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(23, 54, 93, 0.25);
+}
+
+.btn-outline-primary {
+  color: var(--cloudexam-primary) !important;
+  border: 2px solid var(--cloudexam-primary) !important;
+  font-weight: 600;
+  background-color: #ffffff !important;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--cloudexam-primary) !important;
+  color: #ffffff !important;
+}
+
+/* Cards */
+.card {
+  border: 1px solid var(--cloudexam-border);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(23, 54, 93, 0.04);
+}
+
+/* Modern Form Controls */
+.form-control, .form-select {
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.925rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--cloudexam-accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ========================================================== */
+/* MODERN AUTHENTICATION & LOGIN UI STYLES                    */
+/* ========================================================== */
+.auth-hero-card {
+  background: linear-gradient(135deg, #17365d 0%, #1e3a8a 60%, #1d4ed8 100%);
+  border-radius: 20px 0 0 20px;
+  color: #ffffff;
+  padding: 3rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-hero-card::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.auth-pill-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 0.6rem 1rem;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.auth-role-card {
+  cursor: pointer;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.auth-role-card:hover {
+  border-color: #94a3b8;
+  transform: translateY(-2px);
+}
+
+.auth-role-card.active {
+  border-color: var(--cloudexam-accent);
+  background: #eff6ff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+}
+
+/* Dashboard Metric Cards */
+.stat-card {
+  background: #ffffff;
+  border: 1px solid var(--cloudexam-border);
+  border-radius: 14px;
+  padding: 1.25rem 1.15rem;
+  box-shadow: 0 2px 10px rgba(23, 54, 93, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(23, 54, 93, 0.08);
+}
+
+.stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--cloudexam-primary);
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Performance Badges */
+.badge-status {
+  padding: 0.35em 0.75em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.badge-excellent {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.badge-good {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.badge-average {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.badge-improvement {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.badge-not-attempted {
+  background-color: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+/* Custom Chart Visualization */
+.chart-container {
+  background: #ffffff;
+  border: 1px solid var(--cloudexam-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.chart-bar-bg {
+  background-color: #e2e8f0;
+  border-radius: 6px;
+  height: 22px;
+  overflow: hidden;
+}
+
+.chart-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Suggestion Card */
+.suggestion-box {
+  background: #f8fafc;
+  border-left: 4px solid var(--cloudexam-primary);
+  border-radius: 0 10px 10px 0;
+  padding: 1rem 1.25rem;
+}
+
+/* ========================================================== */
+/* CHAT INTERFACE STYLES                                      */
+/* ========================================================== */
+.chat-window {
+  background: #ffffff;
+  border: 1px solid var(--cloudexam-border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(23, 54, 93, 0.06);
+}
+
+.chat-messages-container {
+  height: 440px;
+  overflow-y: auto;
+  padding: 1.25rem;
+  background-color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.chat-bubble {
+  max-width: 75%;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  position: relative;
+  font-size: 0.925rem;
+  line-height: 1.4;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.chat-bubble-sent {
+  align-self: flex-end;
+  background: #17365d;
+  color: #ffffff;
+  border-bottom-right-radius: 3px;
+}
+
+.chat-bubble-received {
+  align-self: flex-start;
+  background: #ffffff;
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+  border-bottom-left-radius: 3px;
+}
+
+.chat-bubble-reminder {
+  align-self: center;
+  max-width: 90%;
+  background: #fffbeb;
+  border: 1.5px solid #fde68a;
+  color: #92400e;
+  border-radius: 12px;
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+}
+
+.chat-meta {
+  font-size: 0.72rem;
+  margin-top: 0.35rem;
+  opacity: 0.85;
+}
+
+/* ========================================================== */
+/* EXAM REMINDER CARD STYLES                                  */
+/* ========================================================== */
+.reminder-card {
+  border-left: 5px solid #f59e0b;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.reminder-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.15);
+}
+
+/* Student Avatar Circle */
+.student-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #e0e7ff;
+  color: #3730a3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
