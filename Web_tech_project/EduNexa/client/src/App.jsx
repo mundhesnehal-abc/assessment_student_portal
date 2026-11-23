@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-const API = "http://localhost:5000/api";
+const API = "https://assessment-student-portal.onrender.com/api";
 
 function calculateGrade(percentage) {
   if (percentage >= 90) return "A+";
